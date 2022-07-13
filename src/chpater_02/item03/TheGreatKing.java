@@ -1,6 +1,7 @@
 package chpater_02.item03;
 
 import java.lang.reflect.AccessibleObject;
+import java.util.function.Consumer;
 
 public class TheGreatKing {
     public static void main(String[] args) {
@@ -13,5 +14,8 @@ public class TheGreatKing {
 
         LeeSeongGyeTheFoundingKingOfJoseon leeSeongGyeTheFoundingKingOfJoseon = LeeSeongGyeTheFoundingKingOfJoseon.INSTANCE;
         leeSeongGyeTheFoundingKingOfJoseon.foundingJoseon();
+
+        
+
     }
 }
