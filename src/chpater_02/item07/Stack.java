@@ -17,10 +17,24 @@ public class Stack {
         elements[size++] = e;
     }
 
+    /**
+     * 메모리 누수 지점
+     */
+//    public Object pop(){
+//        if(size ==0)
+//            throw new EmptyStackException();
+//        return elements[-size];
+//    }
+
+    /**
+     * 해당 참조를 다썻을 때 null 처리
+     */
     public Object pop(){
         if(size ==0)
             throw new EmptyStackException();
-        return elements[-size];
+        Object result = elements[--size];
+        elements[size] = null;
+        return result;
     }
 
     private void ensureCapacity() {
